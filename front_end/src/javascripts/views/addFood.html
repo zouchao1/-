@@ -1,0 +1,63 @@
+<div class="box box-info food-save">
+    <div class="box-header with-border">
+        <h3 class="box-title">添加菜品信息</h3>
+    </div>
+    <!-- /.box-header -->
+    <!-- form start -->
+    <form class="form-horizontal" id="save-form" enctype="multipart/form-data">
+        <div class="box-body">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">菜系类别</label>
+
+                <div class="col-sm-10">
+                    <input required type="text" class="form-control" name="foodKindName" id="foodKindName" placeholder="菜系类别">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">菜单名</label>
+
+                <div class="col-sm-10">
+                    <input type="text" required class="form-control" name="foodName" id="foodName" placeholder="请输入菜单名">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">单价</label>
+
+                <div class="col-sm-10">
+                    <input type="text" required class="form-control" name="price" id="price" placeholder="请输入价格">
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">图片</label>
+
+                <div id="addCommodityIndex">
+
+
+                    <!--input-group start-->
+                    <div class="input-group row">
+
+                        <div class="col-sm-9 big-photo">
+                            <div id="preview">
+                                <img id="imghead" border="0" src="/static/libs/adminLTE/images/photo_icon.png" width="90"
+                                    height="90" onclick="$('#previewImg').click();">
+                            </div>
+                            <input type="file" onchange="previewImage(this)" style="display: none;" id="previewImg"
+                                name="image">
+                            <!--<input id="uploaderInput" class="uploader__input" style="display: none;" type="file" accept="" multiple="">-->
+                        </div>
+                    </div>
+                    <!--input-group end-->
+
+                </div>
+            </div>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            <button type="button" id="back" class="btn btn-default">返回列表</button>
+            <button type="submit" class="btn btn-info pull-right">提交</button>
+            <button type="reset" class="btn btn-default pull-right" style="margin-right: 15px">重置</button>
+        </div>
+        <!-- /.box-footer -->
+    </form>
+</div>

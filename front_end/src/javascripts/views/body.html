@@ -1,0 +1,221 @@
+<header class="main-header">
+
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>饿了吗</b></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>饿了吗</b>管理系统</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">切换导航</span>
+        </a>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <!-- Messages: style can be found in dropdown.less-->
+
+                <!-- User Account Menu -->
+                <li class="dropdown user user-menu">
+                    <!-- Menu Toggle Button -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <!-- The user image in the navbar-->
+                        <img src="/static/libs/adminLTE/images/user2-160x160.jpg" class="user-image" alt="User Image">
+                        <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                        <span class="hidden-xs">zc</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- The user image in the menu -->
+                        <li class="user-header">
+                            <img src="/static/libs/adminLTE/images/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                            <p>
+                                zc- Web Developer
+                                <small>Member since Nov. 2012</small>
+                            </p>
+                        </li>
+                        <!-- Menu Body -->
+                        <li class="user-body">
+                            <div class="row">
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">花朵</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">销量</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">好友</a>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="#" class="btn btn-default btn-flat">设置</a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="#" class="btn btn-default btn-flat">退出</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Control Sidebar Toggle Button -->
+                <li>
+                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="/static/libs/adminLTE/images/user2-160x160.jpg" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <p>zc</p>
+                <!-- Status -->
+                <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+            </div>
+        </div>
+
+
+
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu">
+            <li class="header">菜单</li>
+            <!-- Optionally, you can add icons to the links -->
+            <li class="nav-link" to="/home"><a href="javascript:void(0)"><i class="glyphicon glyphicon-home"></i> <span>首页</span></a></li>
+            <li class="active treeview menu-open">
+                <a href="avascript:void(0)">
+                    <i class="glyphicon glyphicon-apple"></i> <span>菜品管理</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="nav-link" to="/writerFood" class="active"><a href="javascript:void(0)"><i class="glyphicon glyphicon-pencil"></i>
+                            编辑菜品 </a></li>
+                    <li class="nav-link" to="/addFood"><a href="javascript:void(0)"><i class="fa fa-circle-o"></i> 添加菜品
+                        </a></li>
+                </ul>
+            </li>
+
+
+
+            <li to="/user" class="nav-link"><a href="javascript:void(0)"><i class="glyphicon glyphicon-user"></i> <span>用户管理</span></a></li>
+            <li to="/Invoicing" class="nav-link"><a href="javascript:void(0)"><i class="glyphicon glyphicon-usd"></i>
+                    <span>结账管理</span></a></li>
+
+        </ul>
+        <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+</aside>
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header" id="page-header">
+
+    </section>
+    <!-- Main content -->
+    <section class="content" id="router-view">
+
+        <!-- Your Page Content Here -->
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+<!-- Main Footer -->
+
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <!-- Home tab content -->
+        <div class="tab-pane active" id="control-sidebar-home-tab">
+            <h3 class="control-sidebar-heading">近期活动</h3>
+            <ul class="control-sidebar-menu">
+                <li>
+                    <a href="javascript::;">
+                        <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                        <div class="menu-info">
+                            <h4 class="control-sidebar-subheading">zc 的生日</h4>
+
+                            <p>Will be 23 on April 24th</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- /.control-sidebar-menu -->
+
+            <h3 class="control-sidebar-heading"> 任务进度</h3>
+            <ul class="control-sidebar-menu">
+                <li>
+                    <a href="javascript::;">
+                        <h4 class="control-sidebar-subheading">
+                            自定义模板设计
+                            <span class="pull-right-container">
+                                <span class="label label-danger pull-right">70%</span>
+                            </span>
+                        </h4>
+
+                        <div class="progress progress-xxs">
+                            <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- /.control-sidebar-menu -->
+
+        </div>
+        <!-- /.tab-pane -->
+        <!--  统计信息选项卡内容 -->
+        <div class="tab-pane" id="control-sidebar-stats-tab"> 统计信息选项卡内容</div>
+        <!-- /.tab-pane -->
+        <!-- Settings tab content -->
+        <div class="tab-pane" id="control-sidebar-settings-tab">
+            <form method="post">
+                <h3 class="control-sidebar-heading">常规设置项</h3>
+
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        报告面板用法
+                        <input type="checkbox" class="pull-right" checked>
+                    </label>
+
+                    <p>
+                        常规设置选项的相关信息
+                    </p>
+                </div>
+                <!-- /.form-group -->
+            </form>
+        </div>
+        <!-- /.tab-pane -->
+    </div>
+</aside>
+<!-- /.control-sidebar -->
+<!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+<div class="control-sidebar-bg"></div>
