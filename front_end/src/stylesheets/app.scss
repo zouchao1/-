@@ -29,13 +29,13 @@ html {
     margin-left: 10%;
 }
 
-.content-header h1 {
+.content-header h1,
+.content-header small,
+.breadcrumb li {
     font-family: "my_family";
 }
 
-.content-header small {
-    font-family: "my_family";
-}
+
 
 .box-body .table tr td,
 .box-body .table tr th {

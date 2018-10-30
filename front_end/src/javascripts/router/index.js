@@ -1,5 +1,4 @@
 import SMERouter from 'sme-router'
-import home_template from '../views/home.html'
 import {
     bus
 } from '../utils/'
@@ -7,6 +6,8 @@ import food_controller from '../controllers/food'
 import not_found_template from '../views/404.html'
 import page_header_model from '../models/page-header'
 import page_header_controller from '../controllers/page-header'
+import map_controller from '../controllers/map'
+
 let router = null;
 var preUrl = ''
 const _init = () => {
@@ -18,13 +19,12 @@ const _init = () => {
 
     router.route("/", renderPageHeader)
 
-    router.route('/home', (req, res, next) => {
-        res.render(home_template)
-    })
+    router.route('/home', food_controller.home)
     router.route('/addFood', food_controller.add)
 
     router.route('/writerFood', food_controller.write)
     router.route('/food-update', food_controller.update)
+    router.route('/map', map_controller.map)
     // router.route('/user', food_controller.write)
     // router.route('/Invoicing', food_controller.write)
     router.route('/not-found', (req, res, next) => {

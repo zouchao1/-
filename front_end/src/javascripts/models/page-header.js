@@ -9,44 +9,44 @@ const pageHeaderInfo = (url, preUrl) => {
     let _search = URL.parse(preUrl).search || ''
     let _infos = {
         '/home': {
-            title: '首页',
+            title: 'home',
             list: []
         },
         '/map': {
-            title: '地图显示',
+            title: 'mapShow',
             list: [{
-                text: '地图',
+                text: 'map',
                 path: '#/map'
             }]
         },
         '/writerFood': {
-            title: '菜品管理',
-            description: '菜品列表',
+            title: 'foodmanagement',
+            description: 'foodList',
             list: [{
-                text: '菜品列表'
+                text: 'foodList'
             }]
         },
         '/addFood': {
-            title: '菜品管理',
-            description: '添加食品',
+            title: 'foodmanagement',
+            description: 'addFood',
             list: [{
-                    text: '菜品列表',
+                    text: 'foodList',
                     path: '#/writerFood' + _search
                 },
                 {
-                    text: '添加食品'
+                    text: 'addFood'
                 }
             ]
         },
         '/food-update': {
-            title: '菜品管理',
-            description: '菜品更新',
+            title: 'foodmanagement',
+            description: 'foodUpdate',
             list: [{
-                    text: '菜品列表',
+                    text: 'foodList',
                     path: '#/writerFood' + _search
                 },
                 {
-                    text: '更新菜品'
+                    text: 'updateFood'
                 }
             ]
         }
