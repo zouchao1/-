@@ -137,6 +137,9 @@ const bindEvent = () => {
     $("#login_form").submit(async function (e) {
         e.preventDefault();
         let _params = $(this).serialize();
+        $.cookie('connect.sid', {
+            expires: -1
+        })
         let _result = await admin_model.signin(qs.parse(_params))
         switch (_result.status) {
             case 203:

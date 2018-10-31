@@ -1,6 +1,7 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var session = require('express-session')
 var cookieParser = require('cookie-parser');
 var {
   version
@@ -10,12 +11,22 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var foodRouter = require('./routes/food');
 var adminRouter = require('./routes/admin');
+var userRouter = require('./routes/user');
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    httpOnly: false,
+    secure: false,
+    maxAge: 1000 * 60 * 5
+  }
+}))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({
@@ -27,6 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api/' + version + '/food', foodRouter);
 app.use('/api/' + version + '/admin', adminRouter);
+app.use('/api/' + version + '/user', userRouter)
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

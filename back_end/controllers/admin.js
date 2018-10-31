@@ -28,6 +28,11 @@ const signin = async (req, res, next) => {
         let _data = admin_model.signin(req.body.password, _judge_result[0])
 
         if (_data) {
+            req.session.userinfo = {
+                userid: _judge_result[0]._id,
+                level: _judge_result[0].level || 7
+            }
+
             res.render('admin', {
                 code: 200,
                 data: JSON.stringify('success')
