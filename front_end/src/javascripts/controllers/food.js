@@ -228,6 +228,27 @@ const home = (req, res, next) => {
     }
     snow();
     res.render(home_template)
+    setTimeout(() => {
+        lubo()
+    }, 0)
+
+}
+const lubo = () => {
+    var circle = new jCircle({
+        'container': 'circles-container',
+        'circle': 'circle',
+        'mainContent': 'main-circle-content',
+        'animateCircles': true,
+        'speed': 3,
+        'mainViewStyle': 'normal',
+        'minCirclesEffectOver': 'pulse',
+        'contentType': 'images',
+        'stopOnOverMain': false,
+        'mainContentOverAction': 'normal'
+    });
+    circle.create();
+
+
 }
 export default {
     add,

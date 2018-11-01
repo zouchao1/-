@@ -26,6 +26,13 @@ const pageHeaderInfo = (url, preUrl) => {
                 text: 'foodList'
             }]
         },
+        '/order': {
+            title: 'order',
+            description: 'order',
+            list: [{
+                text: 'order'
+            }]
+        },
         '/addFood': {
             title: 'foodmanagement',
             description: 'addFood',
@@ -37,6 +44,13 @@ const pageHeaderInfo = (url, preUrl) => {
                     text: 'addFood'
                 }
             ]
+        },
+        '/usersManage': {
+            title: 'usersManage',
+            list: [{
+                text: 'usersManage',
+                path: '#/usersManage'
+            }]
         },
         '/food-update': {
             title: 'foodmanagement',

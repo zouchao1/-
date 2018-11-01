@@ -1,19 +1,23 @@
 import '../stylesheets/app.scss'
 import router from './router'
-
+import user_controller from './controllers/user'
 import {
     userSigninAuth
-} from './util/auth'
+} from './utils/auth'
 const body_template = require('./views/body.html')
 
 
 // 渲染整体内容结构
 $('#wrapper').html(body_template)
-
-let flag = userSigninAuth();
-if (flag == true) {
-    router.init();
-    $('#wrapper').removeClass('hidden')
-} else {
-    window.location.href = "/admin.html"
+let init = async () => {
+    let flag = await userSigninAuth();
+    console.log(flag)
+    if (flag == true) {
+        $('#wrapper').removeClass('hidden')
+        router.init();
+        user_controller.renderUserInfo()
+    } else {
+        window.location.href = "/admin.html"
+    }
 }
+init()

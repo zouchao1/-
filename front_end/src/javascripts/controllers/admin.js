@@ -102,7 +102,6 @@ const bindEvent = () => {
     $("#regiest_form").submit(async function (e) {
         e.preventDefault();
         let _params = $(this).serialize();
-        console.log(_params)
         let _result = await admin_model.signup(qs.parse(_params))
         switch (_result.status) {
             case 500:
@@ -137,6 +136,9 @@ const bindEvent = () => {
     $("#login_form").submit(async function (e) {
         e.preventDefault();
         let _params = $(this).serialize();
+        $.cookie('connect.sid', {
+            expires: -1
+        })
         let _result = await admin_model.signin(qs.parse(_params))
         switch (_result.status) {
             case 203:
@@ -146,7 +148,7 @@ const bindEvent = () => {
                 toast('用户不存在');
                 break;
             default:
-                // localStorage.user = qs.parse(_params).username
+                localStorage.token = _result.data.token
                 window.location.href = "/";
                 break;
         }

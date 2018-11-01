@@ -24,10 +24,7 @@ html {
     color: #95A5A6;
 }
 
-.home_img {
-    width: 80%;
-    margin-left: 10%;
-}
+
 
 .content-header h1,
 .content-header small,
@@ -51,6 +48,63 @@ input {
     width: 35%;
 }
 
+#menu {
+
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: lightblue;
+}
+
+#menu .page {
+
+    width: 300px;
+    height: 400px;
+
+    background: #FFF;
+    border: 1px solid #999;
+
+}
+
+#menu ul {
+    list-style: none;
+    height: 320px;
+    margin: 20px;
+    padding: 0px;
+    background: #EEE;
+}
+
+#menu li {
+
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    border-bottom: 1px dashed #999;
+}
+
+#menu li span {
+    float: right;
+}
+
+#menu li a {
+    color: #000;
+    text-decoration: none;
+}
+
+#menu li a:hover {
+    text-decoration: underline;
+}
+
+#menu .tip {
+    display: block;
+    height: 20px;
+    margin: 0px 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    background: #999;
+}
 
 
 

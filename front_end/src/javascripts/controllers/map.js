@@ -1,6 +1,20 @@
 import map_template from '../views/map.html'
+import user_model from '../models/user'
+import not_allow_template from '../views/not-allow.html'
+const map = async (req, res) => {
+    let _can = await user_model.allow('map')
+    if (_can.status == 403) {
+        alert('登陆后操作')
+        window.location.href = '/admin.html'
+        return false;
+    }
+    if (_can.status == 402) {
+        res.render(not_allow_template)
+        return false;
+    }
 
-const map = (req, res) => {
+
+
     res.render(map_template)
     if (!window.AMap) {
         let $script = $('<script  src="https://webapi.amap.com/maps?v=1.4.10&key=be62c893845030ada4172d27b0e17664&callback=onApiLoaded&plugin=AMap.Transfer,AMap.Geocoder" >')

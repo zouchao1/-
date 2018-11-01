@@ -7,7 +7,8 @@ import not_found_template from '../views/404.html'
 import page_header_model from '../models/page-header'
 import page_header_controller from '../controllers/page-header'
 import map_controller from '../controllers/map'
-
+import usersManage_controller from "../controllers/usersManage"
+import order_controller from "../controllers/order"
 let router = null;
 var preUrl = ''
 const _init = () => {
@@ -25,8 +26,10 @@ const _init = () => {
     router.route('/writerFood', food_controller.write)
     router.route('/food-update', food_controller.update)
     router.route('/map', map_controller.map)
-    // router.route('/user', food_controller.write)
-    // router.route('/Invoicing', food_controller.write)
+
+    router.route('/usersManage', usersManage_controller.usersManage)
+
+    router.route('/order', order_controller.order)
     router.route('/not-found', (req, res, next) => {
         res.render(not_found_template)
         _navLink('.not-found a[to]')
